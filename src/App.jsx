@@ -22,6 +22,12 @@ function App() {
   return (
     <>
 
+    {/* 
+    admin login details:
+    email: aisha@gmail.com
+    password: password
+    */}
+
       {/* <Properties/> */}
       <Router>
         <Routes>
