@@ -2,7 +2,7 @@ import React from 'react';
 import "./Navbar.css";
 import { menu } from "../data";
 import { Link } from 'react-scroll';
-import { FaBarsStaggered } from 'react-icons/fa6';
+import { FaBarsStaggered, FaCirclePlus } from 'react-icons/fa6';
 import { useState } from "react";
 import { FaTimes } from 'react-icons/fa';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -11,6 +11,8 @@ import { useAuth } from '../contexts/Auth';
 import { useNavigate } from 'react-router-dom';
 import img from '../../assets/images/Frame 9325.png'
 import line from '../../assets/icons/Line 6.png'
+
+
 
 const Navbar = () => {
   const [showSideBar, setShowSideBar] = useState(false);
@@ -21,6 +23,18 @@ const Navbar = () => {
   const handleLogout = () => {
     logout();
     navigate("/");
+  };
+
+  const [count, setCount] = useState(0);
+
+  // Function to handle decreasing the count
+  const handleDecrease = () => {
+    setCount(prevCount => prevCount - 1);
+  };
+
+  // Function to handle increasing the count
+  const handleIncrease = () => {
+    setCount(prevCount => prevCount + 1);
   };
 
   return (
@@ -136,7 +150,19 @@ const Navbar = () => {
               </div>
               <div className="flex flex-col items-center mx-[10px] my-2 xl:mx-[50px]">
                 <h3 className='font-outfit text-[14px] font-semibold'>BEDROOM</h3>
-                <p className='font-outfit text-[15px] text-[#787878]'>e.g Gbagada</p>
+                <div className='flex gap-2 items-center'>
+                  <button className='btn btn-outline-dark rounded-circle flex justify-center items-center' 
+                  style={{ width: '30px', height: '30px' }}
+                  onClick={handleDecrease}>
+                  <span className='flex items-center justify-center h-full'>-</span>
+                  </button>
+                  <span className='mx-2 fw-bold'>{count}</span>
+                  <button className='btn btn-outline-dark rounded-circle'
+                  style={{ width: '30px', height: '30px' }}
+                  onClick={handleIncrease}>
+                    <span className='flex items-center justify-center h-full'>+</span>
+                  </button>
+                </div>
               </div>
               <div className="bg-[#3D9970] h-[85px] w-full xl:w-[230px] cursor-pointer flex flex-col justify-center items-center xl:rounded-r-lg rounded-lg xl:rounded-l-none">
                 <h3 className='font-outfit font-medium text-[20px] text-white '>Find Property</h3>
