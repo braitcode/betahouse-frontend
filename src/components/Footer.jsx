@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="bg-[#035A33] xl:h-[541px] w-full xl:flex xl:flex-col xl:justify-center xl:items-center xl:gap-[5rem]">
               <div className="w-full flex flex-col items-center gap-[1rem]">
                   <div className="w-[90%] flex flex-col justify-between gap-[6rem] xl:my-0 my-4">
-                      <div className="xl:flex xl:flex-row xl:justify-between flex flex-col gap-[15px]">
+                      <div className="xl:flex xl:flex-row xl:justify-between flex flex-col gap-[15px] md:flex md:flex-row">
                           <div className="xl:w-[373px] w-[300px] flex flex-col justify-between">
                               <div className="flex gap-[15px]">
                                   <p className="bg-green-500 rounded-full w-[47.21px] h-[47.21px] text-[23.61px] flex justify-center items-center font-bold text-white">BH</p>
@@ -32,30 +32,30 @@ const Footer = () => {
                           </div>
                           <div className="flex flex-col gap-[20px]">
                               <h2 className="text-[23px] text-white font-outfit font-semibold">Quick Links</h2>
-                              <ul className="flex flex-col gap-[15px] text-[18px] text-white font-outfit">
-                                  <li>Home</li>
-                                  <li>Properties</li>
-                                  <li>About</li>
-                                  <li>Contact Us</li>
-                                  <li>Blog</li>
-                              </ul>
+                              <div className="flex flex-col gap-[15px] text-[18px] text-white font-outfit">
+                                  <p>Home</p>
+                                  <p>Properties</p>
+                                  <p>About</p>
+                                  <p>Contact Us</p>
+                                  <p>Blog</p>
+                              </div>
                           </div>
                           <div className="flex flex-col gap-[20px]">
                               <h2 className="text-[23px] text-white font-outfit font-semibold">More</h2>
-                              <ul className="flex flex-col gap-[15px] text-[18px] text-white font-outfit">
-                                  <li>Agents</li>
-                                  <li>Affordable Houses</li>
-                                  <li>FAQ's</li>
-                              </ul>
+                              <div className="flex flex-col gap-[15px] text-[18px] text-white font-outfit">
+                                  <p>Agents</p>
+                                  <p>Affordable Houses</p>
+                                  <p>FAQ's</p>
+                              </div>
                           </div>
                           <div className="flex flex-col gap-[20px]">
                               <h2 className="text-[23px] text-white font-outfit font-semibold">Popular Search</h2>
-                              <ul className="flex flex-col gap-[15px] text-[18px] text-white font-outfit">
-                                  <li>Apartment for sale</li>
-                                  <li>Apartment for rent</li>
-                                  <li>3 bedroom flat</li>
-                                  <li>Bungalow</li>
-                              </ul>
+                              <div className="flex flex-col gap-[15px] text-[18px] text-white font-outfit">
+                                  <p>Apartment for sale</p>
+                                  <p>Apartment for rent</p>
+                                  <p>3 bedroom flat</p>
+                                  <p>Bungalow</p>
+                              </div>
                           </div>
                       </div>
                       <div className="border border-[#6F6F6F] w-"></div>

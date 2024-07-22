@@ -4,7 +4,7 @@ import betahouse from "../assets/images/betahouse.png";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 import { useNavigate } from "react-router";
 import { useAuth } from "../components/contexts/Auth";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -73,10 +73,16 @@ const Login = () => {
   return (
     <div className="w-full bg-red-600">
       <div className="bg-white container-fluid pt-4 w-[60%] flex gap-6">
-        <div className="w-[50%] flex justify-center">
+        <div className="xl:w-[50%] md:w-full flex justify-center xl:items-center">
           <div className="w-[90%]">
-            <div className="w-[500px] ">
-              <p className="text-[28px] font-outfit font-semibold">
+            <NavLink to='/' className='no-underline'>
+              <div className="logo__container h-[47.21px] flex items-center gap-2 ">
+                <p className='bg-green-500 rounded-full w-[47.21px] h-[47.21px] text-[23.61px] flex justify-center m-0 items-center font-bold text-white'>BH</p>
+                <p className='flex items-center font-poppins font-medium text-[28.21px] h-full text-black m-0'>BetaHouse</p>
+              </div>
+            </NavLink>
+            <div className="xl:w-[500px] my-4 ">
+              <p className="xl:text-[28px] font-outfit font-semibold">
                 Join our community of home seekers and explore the possibilities that await.
               </p>
               <p className="font-outfit text-[16px]">
@@ -85,7 +91,7 @@ const Login = () => {
             </div>
             <div className="">
               <form className="form-milly" onSubmit={handleSubmit}>
-                <div className="form-action">
+                <div className="form-action text-[16px] font-medium font-outfit">
                   <label>Email</label>
                   <input
                     type="email"
@@ -96,7 +102,7 @@ const Login = () => {
                   />
                   {errors.email && <p className="text-red-500 error">{errors.email}</p>}
                 </div>
-                <div className="form-action">
+                <div className="form-action text-[16px] font-medium font-outfit">
                   <label>Password</label>
                   <div className="password-input-wrapper">
                     <input
@@ -106,7 +112,7 @@ const Login = () => {
                       value={password}
                       onChange={handlePasswordChange}
                     />
-                    <span onClick={() => setShowPassword(!showPassword)}>
+                    <span className="my-1" onClick={() => setShowPassword(!showPassword)}>
                       {showPassword ? (
                         <IoEyeOutline className="icon-m" />
                       ) : (
@@ -178,7 +184,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="">
+        <div className="hidden xl:block">
           <img src={betahouse} alt="" className="h-[90vh] w-[779px]" />
         </div>
       </div>

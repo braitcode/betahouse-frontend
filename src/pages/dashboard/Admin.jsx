@@ -1,8 +1,8 @@
-import { useAuth } from "../../contexts/Auth.jsx";
-import Jumbotron from "../../components/cards/Jumbotron.jsx";
+import { useAuth } from "../../components/contexts/Auth.jsx";
+import Jumbotron from "../../components/Jumbotron.jsx";
 import AdminMenu from "../../components/nav/AdminMenu.jsx";
-import Menu from "../../components/NavBar.jsx";
-import SideNav from "../../components/SideNav.jsx";
+import Navbar from "../../components/Navbar/index.jsx";
+// import SideNav from "../../components/SideNav.jsx";
 
 const AdminDashboard = () => {
   // context
@@ -10,8 +10,8 @@ const AdminDashboard = () => {
 
   return (
     <>
-      <Menu />
-      <SideNav />
+      <Navbar />
+      {/* <SideNav /> */}
       <Jumbotron
         title={`Hello ${auth?.user?.name || "Admin"}`}
         subTitle="Admin Dashboard"
@@ -42,13 +42,13 @@ const AdminDashboard = () => {
                 </tr>
                 <tr>
                   <th scope="row">2</th>
-                  <td>Ademola Kuku</td>
+                  <td>Kunle Femi</td>
                   <td>admin2@email.com</td>
                   <td>Marketing Head</td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
-                  <td>Larry Gaga</td>
+                  <td>Grace Hadah</td>
                   <td>adminhr@email.com</td>
                   <td>Human resource</td>
                 </tr>
